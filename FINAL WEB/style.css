@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+} 
+
+.Portfolio{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+.Portfolio img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+.sec{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+    min-height: 120vh;
+    margin-bottom: 2000px;
+}
+
+.sec h2 {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec h1 {
+    font-size: 4em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.Header1{
+    background-color: #E7D7FE;
+    height: auto;
+    text-align: center;
+    font-family: 'Poppins';font-size: 35px;
+}
+
+.Header2 {
+    display: flex; /* Make the header a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically (optional) */
+    height: 100px; /* Adjust this to your desired header height */
+}
+
+.imglogo {
+    max-width: 100%; /* Ensure the image does not exceed the header width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header {
+    position: fixed;
+    top: 40;
+    right: 0;
+    left: 0;
+    background-color: #D7BDFC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    z-index: 999;
+}
+
+
+.bgimg {
+    width: 100%; /* Ensure the container itself takes the full width of its parent */
+    overflow: hidden; /* Optional: hide any overflow if the image exceeds container height */
+    margin-top: 65px;
+    position: fixed;
+}
+
+.full-width-image {
+    width: 100%; /* Make the image fit the width of its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-right: 10rem;
+    color: var(--black);
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    display: inline-block; /* Ensure text alignment works properly */
+    line-height: 2; /* Adjust line height if needed */
+}
+
+.header .navbar a:hover{
+    border-bottom: .1rem solid var(--black);
+    padding-bottom: .4rem;
+}
+.header .icon i{
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#menu-bar{
+    display: none;
+}
+
+
+
+
+
+/* Tablet Mode (600px to 991px) */
+@media (max-width: 1200px) and (min-width: 600px) {
+    .header {
+        padding: 1.3rem 2rem;
+        font-size: 10%;
+    }
+    .Header1 {
+        font-size: 25px;
+        padding: 0.5rem;
+    }
+    .home .homeContent {
+        margin-left: 0;
+        width: 80%;
+    }
+    .header .navbar {
+        /* Keep flex-direction property for column layout */
+        flex-direction: row; /* Change flex-direction to row */
+        justify-content: center; /* Center align items horizontally */
+    }
+    .header .navbar a {
+        margin: 0 1rem; /* Add margin to space out the items */
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 600px) {
+    #menu-bar {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        background-color: var(--white);
+        height: auto;
+        transition: right 0.3s ease;
+        box-shadow: var(--box-shadow);
+        z-index: 998;
+        flex-direction: column;
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .Header1 {
+        height: auto;
+        font-size: 20px;
+        padding: 0.5rem;
+    }
+    .header .navbar a {
+        display: block;
+        font-size: 1.8rem;
+        color: black;
+        margin: 1.5rem;
+        text-align: left;
+    }
+    .Header2 {
+        height: 50px;
+    }
+    .imglogo {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+/* Mobile Mode (up to 600px) */
+@media (max-width: 600px) {
+   
+    #menu-bar {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        background-color: var(--white);
+        height: auto;
+        transition: right 0.3s ease;
+        box-shadow: var(--box-shadow);
+        z-index: 998;
+        flex-direction: column;
+    }
+    .header .navbar.active {
+        right: 0;
+    }
+    .Header1 {
+        height: auto;
+        font-size: 15px;
+        padding: 0.5rem;
+    }
+    .header .navbar a {
+        display: block;
+        font-size: 1.6rem;
+        color: black;
+        margin: 1rem;
+        text-align: left;
+    }
+    .Header2 {
+        height: 40px;
+    }
+    .header {
+        margin-top: 4%;
+    }
+    
+    .imglogo {
+        max-width: 60%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
